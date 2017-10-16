@@ -4,7 +4,7 @@ All Jobs for <strong><%= @company.name %></strong>
   <ul>
     <%= link_to job.title, company_job_path(@company, job) %> at <%= job.company.name %><br/>
     <%= link_to "Edit", edit_company_job_path(@company, job)%>
-    <%= link_to "Delete", company_job_path(@company, job), method: :destroy%>    
+    <%= link_to "Delete", company_job_path(@company, job), method: :delete%>    
   </ul>
 
 <% end %>
