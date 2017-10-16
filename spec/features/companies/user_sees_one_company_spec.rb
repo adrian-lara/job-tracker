@@ -7,8 +7,6 @@ describe "User sees one company" do
 
     visit company_path(company)
 
-    # save_and_open_page
-
     expect(current_path).to eq(company_jobs_path(company))
     expect(page).to have_content("ESPN")
     expect(page).to have_link("Developer")
