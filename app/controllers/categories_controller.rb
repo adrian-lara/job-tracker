@@ -6,12 +6,12 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    category = Category.create(category_params)
-    if category.id.nil?
+    category = Category.new(category_params)
+    if category.save
+      redirect_to category_path(category)
+    else
       flash[:failure] = "#{category.title} already exists!"
       redirect_to new_category_path
-    else
-      redirect_to category_path(category)
     end
   end
 
