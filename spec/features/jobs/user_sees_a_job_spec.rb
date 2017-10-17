@@ -22,9 +22,12 @@ describe "When a vists a company's show page, clicks on a link to a job page" do
 
     visit company_path(company)
     click_link "Developer"
+    # save_and_open_page
+
 
     expect(page).to have_content("ESPN")
     expect(page).to have_content("Developer")
     expect(page).to have_content("70")
+    expect(page).to have_field("content")
   end
 end
