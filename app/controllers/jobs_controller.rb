@@ -11,7 +11,6 @@ class JobsController < ApplicationController
   end
 
   def create
-    binding.pry
     @job = @company.jobs.new(job_params)
     if @job.save
       flash[:success] = "You created #{@job.title} at #{@company.name}"
