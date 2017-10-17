@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :jobs
   end
 
-  resources :categories, only: [:index, :show, :new, :create]
+  resources :categories, only: [:index, :show, :new, :create, :edit]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
