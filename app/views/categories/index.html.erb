@@ -5,7 +5,7 @@
   <li>
     <%= category.title %>
     <%= link_to "Edit", edit_category_path(category) %>
-    <%= link_to "Delete", category_path(category), method: :destroy %>
+    <%= link_to "Delete", category_path(category), method: :delete %>
   </li>
   <% end %>
 </ul>
