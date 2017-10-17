@@ -7,8 +7,6 @@ describe "When a user visits the category index page" do
 
     visit categories_path
 
-    save_and_open_page
-
     expect(page).to have_content(category_1.title)
     expect(page).to have_content(category_2.title)
     expect(page).to have_link("Edit", href: edit_category_path(category_1))
