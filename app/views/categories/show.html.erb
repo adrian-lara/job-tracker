@@ -2,8 +2,10 @@
 
 <ul>
   <% @category.jobs.each do |job| %>
-    <li>
-      <%= "#{job.title} with #{job.company.name}" %>
+    <li class = "subcontent">
+      <%= link_to job.title, company_job_path(job.company, job), class: "title_link" %>
+      with
+      <%= link_to job.company.name, company_jobs_path(job.company), class: "title_link" %>
     </li>
   <% end %>
 </ul>

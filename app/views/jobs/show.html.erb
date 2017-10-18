@@ -1,24 +1,17 @@
-Title: <%= @job.title %>
-<br>
+<p class="subcontent">Title: <%= @job.title %></p>
 
-Description: <%= @job.description %>
-<br>
+<p class="subcontent">Description: <%= @job.description %></p>
 
-Level of Interest: <%= @job.level_of_interest %>
-<br>
+<p class="subcontent">Level of Interest: <%= @job.level_of_interest %></p>
 
-City: <%= @job.city %>
-<br>
+<p class="subcontent">City: <%= @job.city %></p>
 
-Company: <%= link_to @job.company.name, company_path(@job.company) %>
-<br>
+<p class="subcontent">Company: <%= link_to @job.company.name, company_path(@job.company) %></p>
 
-Category: <%= @job.category.title %>
-<br>
+<p class="subcontent">Category: <%= @job.category.title %></p>
 
-<%= link_to "Edit", edit_company_job_path(@job.company, @job) %>
-<%= link_to "Delete", company_job_path(@job.company, @job), method: :delete %> <br>
+<%= link_to "Edit", edit_company_job_path(@job.company, @job), class: 'link edit_link'%>
+<%= link_to "Delete", company_job_path(@job.company, @job), method: :delete, class: 'link delete_link' %> <br>
 
-
-<%= render partial: 'comments/index' %>
+<%= render partial: 'comments/index', class: 'comments-section' %>
 <%= render partial: 'comments/form' %>
