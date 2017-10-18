@@ -2,7 +2,7 @@ All Jobs for <strong><%= @company.name %></strong>
 
 <% @jobs.each do |job| %>
   <ul>
-    <%= link_to job.title, company_job_path(@company, job), class: "link title_link" %> at <%= job.company.name, class: "link" %><br/>
+    <%= link_to job.title, company_job_path(@company, job), class: "link title_link" %> at <%= link_to job.company.name, company_path(@company), class: "link" %><br/>
     <%= link_to "Edit", edit_company_job_path(@company, job), class: "link edit_link" %>
     <%= link_to "Delete", company_job_path(@company, job), method: :delete, method: :delete, class: "link delete_link" %>
   </ul>

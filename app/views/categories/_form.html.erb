@@ -1,6 +1,6 @@
 <%= form_for(@category) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.label :title, class: 'label' %><br>
+  <%= f.text_field :title, class: 'text_field' %><br>
 
-  <%= f.submit %>
+  <%= f.submit class: 'submit_button'%>
 <% end %>

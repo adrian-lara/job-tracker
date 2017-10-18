@@ -1,18 +1,18 @@
 <%= form_for [@company, @job] do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.label :title, class: 'label' %>
+  <%= f.text_field :title, class: 'text_field' %><br>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+  <%= f.label :description, class: 'label' %>
+  <%= f.text_field :description, class: 'text_field' %><br>
 
-  <%= f.label :level_of_interest %>
-  <%= f.number_field :level_of_interest %>
+  <%= f.label :level_of_interest, class: 'label' %>
+  <%= f.number_field :level_of_interest, class: 'text_field' %><br>
 
-  <%= f.label :city %>
-  <%= f.text_field :city %>
+  <%= f.label :city, class: 'label' %>
+  <%= f.text_field :city, class: 'text_field' %><br>
 
-  <%= f.label :category_id %>
-  <%= f.collection_select :category_id, Category.alphabetical, :id, :title %>
+  <%= f.label :category_id, class: 'label' %>
+  <%= f.collection_select :category_id, Category.alphabetical, :id, :title %><br>
 
-  <%= f.submit %>
+  <%= f.submit class: 'submit_button' %>
 <% end %>
