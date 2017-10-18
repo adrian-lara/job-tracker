@@ -15,6 +15,6 @@ describe "When a user visits a job show page, enters content in comment field, c
     expect(job.comments.count).to eq(1)
     expect(current_path).to eq(company_job_path(company, job))
     expect(page).to have_content("I'm leaving a comment here as a test.")
-    expect(page).to have_content(job.comments.first.created_at)
+    expect(page).to have_content("Posted")
   end
 end

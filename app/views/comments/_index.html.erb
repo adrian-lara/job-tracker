@@ -1,0 +1,8 @@
+<ul>
+  <% @job.comments.each do |comment| %>
+  <li>
+    <p>Posted <%= distance_of_time_in_words(comment.created_at, Time.now) %> ago:</p>
+    <%= comment.content %>
+  </li>
+  <% end %>
+</ul>
