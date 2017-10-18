@@ -13,7 +13,6 @@ describe "When a user visits a job show page, enters content in comment field, c
     fill_in "comment[content]", with: "This is the second comment."
     click_on "Create Comment"
 
-    save_and_open_page
     expect(job.comments.count).to eq(2)
     expect(current_path).to eq(company_job_path(company, job))
     expect(page).to have_content("I'm leaving a comment here as a test.")
