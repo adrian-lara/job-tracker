@@ -1,0 +1,39 @@
+$slight_box_shadow: 1px 0px #ededed;
+
+.navbar {
+  display: inline-flex;
+  flex-flow: column;
+  box-shadow: $slight_box_shadow;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 18%;
+  height: 100%;
+
+  align-items: center;
+  background-color: #c4c9d1;
+  ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    li {
+      padding: 10px;
+    }
+  }
+}
+
+.header {
+  background-color: #e0b07d;
+  text-align: center;
+
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navlink {
+  text-decoration: none;
+  color: #ce8b5f;
+  font-size: 14px;
+}
