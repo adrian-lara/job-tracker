@@ -1,8 +1,8 @@
 <ul>
   <% @job.sorted_comments.each do |comment| %>
   <li>
-    <p>Posted <%= distance_of_time_in_words(comment.created_at, Time.now) %> ago:</p>
-    <%= comment.content %>
+    <p>Posted <%= distance_of_time_in_words(comment.created_at, Time.now), class: "title" %> ago:</p>
+    <%= comment.content, class: "subcontent"%>
   </li>
   <% end %>
 </ul>

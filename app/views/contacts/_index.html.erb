@@ -2,8 +2,8 @@
 
 <% @company.contacts.each do |contact| %>
   <ul>
-    <li>Name: <%= contact.full_name %></li>
-    <li>Position: <%= contact.position %></li>
-    <li>Email: <%= contact.email %></li>
+    <li class = "subcontent">Name: <%= contact.full_name %></li>
+    <li class = "subcontent">Position: <%= contact.position %></li>
+    <li class = "subcontent">Email: <%= contact.email %></li>
   </ul>
 <% end %>
