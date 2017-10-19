@@ -1,0 +1,23 @@
+$slight_box_shadow: 0.25px 0.25px #ededed;
+
+.label {
+
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+#job_category_id {
+  margin-bottom: 20px;
+}
+
+.text_field {
+  box-shadow: $slight_box_shadow;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.submit_button {
+  margin-left: 5px;
+  margin-bottom: 15px;
+  box-shadow: $slight_box_shadow;
+  height: 25px;
+}

@@ -5,7 +5,7 @@ $white_text_shadow: .25px .25px white;
   display: inline-flex;
   box-shadow: $slight_box_shadow;
   flex-flow: column;
-  align-items: center;
+  text-indent: 5px;
 
   background-color: #8898ad;
 
@@ -19,17 +19,34 @@ $white_text_shadow: .25px .25px white;
   text-shadow: $white_text_shadow;
 
   .subcontent {
-    margin: 7px;
+    text-indent: 0px;
+    margin: 3px;
+    margin-left: 5px;
     color: white;
+    font-size: 11px;
     text-shadow: .5px .5px black;
   }
   .sub-title {
     color: black;
     text-shadow: $white_text_shadow;
   }
-}
+  .new_contact {
+    display: inline-flex;
+    flex-flow: column;
+    text-indent: 0px;
+    margin-left: 5px;
 
-.new_contact {
-  font-size: 11px;
-  width: 75%;
+    font-size: 11px;
+    width: 75%;
+    .label {
+
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+    .text_field {
+      box-shadow: $slight_box_shadow;
+      margin-left: 5px;
+      margin-bottom: 5px;
+    }
+  }
 }
