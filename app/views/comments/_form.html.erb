@@ -1,6 +1,5 @@
-<h5>Post a new comment:</h5>
+<h4>Post new comment:</h4>
 <%= form_for([@job, @comment]) do |f| %>
-  <%= f.label :content, class: 'label' %>
   <%= f.text_area :content, class: 'text_field' %><br>
 
   <%= f.submit class: "submit_button" %>

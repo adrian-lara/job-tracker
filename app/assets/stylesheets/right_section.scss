@@ -1,0 +1,35 @@
+$slight_box_shadow: 1px 1px #ededed;
+$white_text_shadow: .25px .25px white;
+
+.right-section {
+  display: inline-flex;
+  box-shadow: $slight_box_shadow;
+  flex-flow: column;
+  align-items: center;
+
+  background-color: #8898ad;
+
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 20%;
+
+  font-size: 12px;
+  text-shadow: $white_text_shadow;
+
+  .subcontent {
+    margin: 7px;
+    color: white;
+    text-shadow: .5px .5px black;
+  }
+  .sub-title {
+    color: black;
+    text-shadow: $white_text_shadow;
+  }
+}
+
+.new_contact {
+  font-size: 11px;
+  width: 75%;
+}
