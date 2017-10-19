@@ -1,0 +1,9 @@
+<h3>Home</h3>
+
+<ul>Interest Level - Job Count
+  <% @jobs.interest_counts.each do |interest| %>
+  <li class="sub-details long-list">
+    Interest Level <%= interest[:level] %> - <%= interest[:job_count] %> job(s)
+  </li>
+  <% end %>
+</ul>
