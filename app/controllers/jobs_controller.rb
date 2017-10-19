@@ -7,6 +7,9 @@ class JobsController < ApplicationController
       @company = Company.find(params[:company_id])
       @jobs = @company.jobs
       @contact = Contact.new
+    elsif params[:sort]
+      @jobs = Job.sort_by(params[:sort])
+      render :independent
     else
       @jobs = Job.all
       render :independent

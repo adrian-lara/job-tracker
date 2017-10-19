@@ -8,4 +8,8 @@ class Job < ApplicationRecord
     comments.order(:created_at).reverse
   end
 
+  def self.sort_by(filter)
+    order(:city) if filter == "location"
+  end
+
 end

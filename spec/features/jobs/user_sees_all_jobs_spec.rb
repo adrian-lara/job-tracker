@@ -24,9 +24,7 @@ describe "When a user visits '/jobs'" do
     company.jobs.create!(title: "QA Analyst", level_of_interest: 75, city: "New York City", category: category)
 
     visit jobs_path
-
-    save_and_open_page
-
+    
     expect(page).to have_link("ESPN")
     expect(page).to have_link("Developer")
     expect(page).to have_link("QA Analyst")
