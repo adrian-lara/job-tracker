@@ -1,11 +1,11 @@
-<h1>All Categories</h1>
+<h3>Categories</h3>
 
-<ul>
-  <% @categories.each do |category| %>
-  <li>
-    <%= link_to category.title, category_path(category), class: "link title_link" %>
-    <%= link_to "Edit", edit_category_path(category), class: "link edit_link" %>
-    <%= link_to "Delete", category_path(category), method: :delete, class: "link delete_link" %>
-  </li>
-  <% end %>
-</ul>
+<% @categories.each do |category| %>
+  <ul>
+    <li>
+      <%= link_to category.title, category_path(category), class: "link title_link" %>
+      <%= link_to "Edit", edit_category_path(category), class: "link edit_link" %>
+      <%= link_to "Delete", category_path(category), method: :delete, class: "link delete_link" %>
+    </li>
+  </ul>
+<% end %>
