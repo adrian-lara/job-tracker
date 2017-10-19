@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   end
 
   resources :jobs, only: [:index]
+
+  get '/dashboard' , to: 'application#dashboard'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
