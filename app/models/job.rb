@@ -13,6 +13,10 @@ class Job < ApplicationRecord
     order(level_of_interest: :desc) if filter == "interest"
   end
 
+  def self.by_location(city)
+    where(city: city)
+  end
+
   def self.interest_counts
     interest_level_data = []
     interest_level_counts.each_pair do |k, v|

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe "When a user visits '/jobs?sort=location'" do
-  it "the user sees a list of jobs sorted by location" do
+describe "When a user visits '/jobs?sort=interest'" do
+  it "the user sees a list of jobs sorted by interest" do
     company = Company.create!(name: "ESPN")
     category = Category.create(title: "Software")
     company.jobs.create!(title: "Developer", level_of_interest: 70, city: "San Francisco", category: category)

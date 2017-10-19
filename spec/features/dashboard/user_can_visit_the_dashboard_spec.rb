@@ -29,7 +29,6 @@ describe "When a user visit '/dashboard'" do
   end
 
   it "the user sees a list of location links and job counts" do
-    save_and_open_page
     expect(page).to have_link("San Francisco")
     expect(page).to have_content("San Francisco - 1 job(s)")
     expect(page).to have_content("Remote - 2 job(s)")

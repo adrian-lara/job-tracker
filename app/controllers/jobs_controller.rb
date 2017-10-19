@@ -10,6 +10,9 @@ class JobsController < ApplicationController
     elsif params[:sort]
       @jobs = Job.sort_by(params[:sort])
       render :independent
+    elsif params[:location]
+      @jobs = Job.by_location(params[:location])
+      render :independent
     else
       @jobs = Job.all
       render :independent
