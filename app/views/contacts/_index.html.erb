@@ -1,9 +1,9 @@
-<h3>Contacts at <%= @company.name %>:</h3>
+<h3>Contacts at <%= @company.name %></h3>
 
 <% @company.contacts.each do |contact| %>
-  <ul>
-    <li class = "subcontent">Name: <%= contact.full_name %></li>
-    <li class = "subcontent">Position: <%= contact.position %></li>
-    <li class = "subcontent">Email: <%= contact.email %></li>
-  </ul>
+<div class="subcontent">
+  Name: <%= contact.full_name %><br>
+  Position: <%= contact.position %><br>
+  Email: <%= contact.email %><br>
+</div><br>
 <% end %>

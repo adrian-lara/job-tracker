@@ -1,4 +1,4 @@
-<h3>All Jobs at <%= link_to @company.name, company_path(@company), class: "header_link" %></h3>
+<h3>Jobs at <%= link_to @company.name, company_path(@company), class: "header_link" %></h3>
 
 <% @jobs.each do |job| %>
   <ul>
@@ -11,5 +11,7 @@
 
 <% end %>
 
-<%= render partial: 'contacts/index', class: "contacts-section" %>
-<%= render partial: 'contacts/form' %>
+<div class = "contacts-section">
+  <%= render partial: 'contacts/index' %>
+  <%= render partial: 'contacts/form' %>
+</div>
