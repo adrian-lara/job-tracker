@@ -2,7 +2,7 @@
 <p class="subcontent">Title: <%= @job.title %></p>
 <p class="subcontent">Description: <%= @job.description %></p>
 <p class="subcontent">City: <%= @job.city %></p>
-<p class="subcontent">Category: <%= @job.category.title %></p>
+<p class="subcontent">Category: <%= link_to @job.category.title, category_path(@job.category), class: 'header_link' %></p>
 <p class="subcontent">Level of Interest: <%= @job.level_of_interest %></p>
 
 <%= link_to "Edit", edit_company_job_path(@job.company, @job), class: 'link edit_link standalone'%>
