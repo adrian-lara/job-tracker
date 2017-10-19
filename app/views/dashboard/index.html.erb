@@ -1,5 +1,14 @@
 <h3>Home</h3>
 
+
+<ul>Top 3 Companies (Avg. Interest Level)
+  <% @jobs.top_three.each do |info| %>
+  <li class="sub-details">
+    <%= info[:name] %> (<%= info[:avg_interest] %>)
+  </li>
+  <% end %>
+</ul>
+
 <ul>Interest Level - Job Count
   <% @jobs.interest_counts.each do |interest| %>
   <li class="sub-details long-list">
