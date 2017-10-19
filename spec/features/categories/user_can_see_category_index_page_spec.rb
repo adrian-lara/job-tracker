@@ -7,6 +7,7 @@ describe "When a user visits the category index page" do
 
     visit categories_path
 
+    expect(page).to have_link("Create New Category")
     expect(page).to have_link(category_1.title)
     expect(page).to have_link(category_2.title)
     expect(page).to have_link("Edit", href: edit_category_path(category_1))

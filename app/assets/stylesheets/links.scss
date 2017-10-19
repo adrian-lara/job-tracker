@@ -1,3 +1,5 @@
+$slight_box_shadow: 0.25px 0.25px #ededed;
+
 .link {
   color: #70a4ff;
   font-size: 13px;
@@ -5,6 +7,16 @@
 
 .header_link {
   color: #70a4ff;
+}
+
+.new_link {
+  margin-left: 10px;
+  background-color: #e2e2e2;
+  text-align: center;
+  border-radius: 2px;
+  width: 175px;
+  height: 18px;
+  box-shadow: $slight_box_shadow;
 }
 
 .edit_link {
@@ -34,6 +46,7 @@
 
   background-color: #e2e2e2;
   font-size: 13px;
+  box-shadow: $slight_box_shadow;
 }
 
 .detail_link {
