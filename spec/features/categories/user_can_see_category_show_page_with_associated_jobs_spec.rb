@@ -11,7 +11,7 @@ describe "When a user visits category index, clicks on category title link" do
     click_on "Software"
 
     expect(current_path).to eq(category_path(category))
-    expect(page).to have_content("#{job_1.title} with #{company.name}")
-    expect(page).to have_content("#{job_2.title} with #{company.name}")
+    expect(page).to have_content("#{job_1.title} (#{company.name})")
+    expect(page).to have_content("#{job_2.title} (#{company.name})")
   end
 end
