@@ -9,6 +9,7 @@ describe "User sees all jobs" do
 
     visit company_path(company)
 
+    expect(page).to have_link("Create New Job")
     expect(page).to have_content("ESPN")
     expect(page).to have_content("Developer")
     expect(page).to have_content("QA Analyst")

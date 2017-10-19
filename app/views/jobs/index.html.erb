@@ -1,5 +1,7 @@
 <h3>Jobs at <%= @company.name %></h3>
 
+<%= link_to "Create New Job", new_company_job_path(@company), class: 'link new_link' %>
+
 <% @jobs.each do |job| %>
   <ul>
     <li>
