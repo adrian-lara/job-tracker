@@ -9,7 +9,8 @@ class Job < ApplicationRecord
   end
 
   def self.sort_by(filter)
-    order(:city) if filter == "location"
+    return order(:city) if filter == "location"
+    order(level_of_interest: :desc) if filter == "interest"
   end
 
 end
