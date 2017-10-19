@@ -1,0 +1,15 @@
+<h3>Jobs</h3>
+<ul>
+  <% @jobs.each do |job| %>
+  <li>
+    <%= link_to job.title, company_job_path(job.company, job), class: "link title_link"%>
+    <ul class='sub-details'>
+      <li>Company: <%= link_to job.company.name, company_path(job.company), class: "detail_link" %></li>
+      <li>Location: <%= link_to job.city, company_path(job.company), class: "detail_link" %></li>
+      <!-- above needs to be changed -->
+      <li>Category: <%= link_to job.category.title, category_path(job.category), class: "detail_link" %></li>
+      <li>Level of Interest: <%= job.level_of_interest %></li>
+    </ul>
+  </li>
+  <% end %>
+</ul>

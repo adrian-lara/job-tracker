@@ -1,10 +1,16 @@
 class JobsController < ApplicationController
-  before_action :set_company, only: [:index, :new, :create, :edit]
+  before_action :set_company, only: [:new, :create, :edit]
   before_action :set_job, only: [:show, :edit, :update, :destroy]
 
   def index
-    @jobs = @company.jobs
-    @contact = Contact.new
+    if params[:company_id]
+      @company = Company.find(params[:company_id])
+      @jobs = @company.jobs
+      @contact = Contact.new
+    else
+      @jobs = Job.all
+      render :independent
+    end
   end
 
   def new
