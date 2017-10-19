@@ -1,8 +1,9 @@
 <div class="header">
-  Job Tracker
+  <%= link_to "Job Tracker", '/dashboard', class: 'nav_header_link' %>
 </div>
 <ul>
-  <li><%= link_to "Home", companies_path, class: 'navlink' %></li>
+  <li><%= link_to "Home", '/dashboard', class: 'navlink' %></li>
+  <li><%= link_to "Jobs", jobs_path, class: 'navlink' %></li>
   <li><%= link_to "Companies", companies_path, class: 'navlink' %></li>
   <li><%= link_to "Categories", categories_path, class: 'navlink' %></li>
 </ul>

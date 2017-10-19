@@ -1,12 +1,18 @@
 <h3>Jobs</h3>
+
+<ul>Sort By:
+  <li><%= link_to "Not a thing", jobs_path, class: "link" %></li>
+  <li><%= link_to "Location", "/jobs?sort=location", class: "link" %></li>
+  <li><%= link_to "Interest Level", '/jobs?sort=interest', class: "link" %></li>
+</ul>
+
 <ul>
   <% @jobs.each do |job| %>
   <li>
     <%= link_to job.title, company_job_path(job.company, job), class: "link title_link"%>
     <ul class='sub-details'>
       <li>Company: <%= link_to job.company.name, company_path(job.company), class: "detail_link" %></li>
-      <li>Location: <%= link_to job.city, company_path(job.company), class: "detail_link" %></li>
-      <!-- above needs to be changed -->
+      <li>Location: <%= link_to job.city, "/jobs?location=#{job.city}", class: "detail_link" %></li>
       <li>Category: <%= link_to job.category.title, category_path(job.category), class: "detail_link" %></li>
       <li>Level of Interest: <%= job.level_of_interest %></li>
     </ul>
