@@ -13,14 +13,6 @@ class Job < ApplicationRecord
     order(level_of_interest: :desc) if filter == "interest"
   end
 
-  def self.top_three
-    select('name, avg(level_of_interest) AS avg_interest')
-          .joins(:company)
-          .group(:name)
-          .order('avg_interest desc')
-          .limit(3)
-  end
-
   def self.interest_counts
     interest_level_data = []
     interest_level_counts.each_pair do |k, v|
@@ -31,6 +23,20 @@ class Job < ApplicationRecord
 
   def self.interest_level_counts
     order(level_of_interest: :desc).group(:level_of_interest).count
+  end
+
+  def self.top_three
+    select('name, avg(level_of_interest) AS avg_interest')
+      .joins(:company)
+      .group(:name)
+      .order('avg_interest desc')
+      .limit(3)
+  end
+
+  def self.locations
+    select(:city, 'count(id) AS job_count')
+      .group(:city)
+      .order(:city)
   end
 
 end

@@ -9,6 +9,14 @@
   <% end %>
 </ul>
 
+<ul>Locations
+  <% @jobs.locations.each do |location| %>
+  <li class="sub-details long-list">
+    <%= link_to location[:city], "/jobs?location=#{location[:city]}" %> - <%= location[:job_count] %> job(s)
+  </li>
+  <% end %>
+</ul>
+
 <ul>Interest Level - Job Count
   <% @jobs.interest_counts.each do |interest| %>
   <li class="sub-details long-list">
