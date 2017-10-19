@@ -7,6 +7,7 @@ describe "User sees all companies" do
 
     visit companies_path
 
+    expect(page).to have_link("Create New Company")
     expect(page).to have_content("ESPN")
   end
 
